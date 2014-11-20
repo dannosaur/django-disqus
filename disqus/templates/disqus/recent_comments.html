@@ -1,0 +1,5 @@
+{% for comment in comments %}
+    <strong>{{ comment.thread.content_object }}</strong>
+    <p>{{ comment.author.username }} writes:</p>
+    <p>{{ comment.raw_message | truncatewords_html:15 }}</p>
+{% endfor %}
